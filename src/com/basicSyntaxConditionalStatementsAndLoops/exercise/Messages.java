@@ -17,7 +17,7 @@ public class Messages {
 
         int n = Integer.parseInt(reader.readLine());
 
-        String input = null;
+        String input;
 
         StringBuilder sb = new StringBuilder();
         while (n-- > 0) {
