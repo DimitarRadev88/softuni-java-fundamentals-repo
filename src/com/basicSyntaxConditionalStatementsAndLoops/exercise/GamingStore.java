@@ -24,7 +24,7 @@ public class GamingStore {
 
         while (!"Game Time".equals(command)) {
             try {
-                BALANCE = buyGame(command, BALANCE);
+                buyGame(command);
             } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
             }
@@ -40,18 +40,17 @@ public class GamingStore {
         System.out.printf("Total spent: $%.2f. Remaining: $%.2f", initialBalance - BALANCE, BALANCE);
     }
 
-    private static double buyGame(String command, double balance) {
+    private static void buyGame(String command) {
         Double gamePrice = GAME_PRICE_MAP.get(command);
 
         if (gamePrice == null) {
             throw new IllegalArgumentException("Not Found");
-        } else if (balance < gamePrice) {
+        } else if (BALANCE < gamePrice) {
             throw new IllegalStateException("Too Expensive");
         } else {
-            balance -= gamePrice;
+            BALANCE -= gamePrice;
             System.out.println("Bought " + command);
         }
-        return balance;
     }
 
     private static void cacheGamePrices() {
