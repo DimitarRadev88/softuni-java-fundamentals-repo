@@ -3,7 +3,6 @@ package com.basicSyntaxConditionalStatementsAndLoops.lab;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Set;
 
 public class TheatrePromotion {
 
@@ -23,12 +22,12 @@ public class TheatrePromotion {
     private static int getTicketPrice(String dayType, int age) {
         validateAge(age);
 
-        switch (dayType) {
-            case "Weekday": return age <= 18 || age > 64 ? 12 : 18;
-            case "Weekend": return age <= 18 || age > 64 ? 15 : 20;
-            case "Holiday": return age <= 18 ? 5 : age <= 64 ? 12 : 10;
-            default: return 0;
-        }
+        return switch (dayType) {
+            case "Weekday" -> age <= 18 || age > 64 ? 12 : 18;
+            case "Weekend" -> age <= 18 || age > 64 ? 15 : 20;
+            case "Holiday" -> age <= 18 ? 5 : age <= 64 ? 12 : 10;
+            default -> 0;
+        };
 
     }
 
