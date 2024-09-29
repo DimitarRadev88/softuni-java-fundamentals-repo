@@ -1,2 +1,5 @@
-package com.dataTypesAndVariables.lab;public class IntegerAndRealNumbers {
+package com.dataTypesAndVariables.lab;
+
+public class IntegerAndRealNumbers {
+
 }
