@@ -1,4 +1,4 @@
-package com.basicSyntaxConditionalStatementsAndLoops.exercise;
+package com.basicSyntaxConditionalStatementsAndLoops.moreExercise;
 
 import java.io.BufferedReader;
 import java.io.IOException;
