@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        topNumber();
+        nXnMatrix();
     }
 
     private static void topNumber() {
@@ -74,14 +74,17 @@ public class Main {
     }
 
     private static void nXnMatrix() {
-        String number = SCANNER.nextLine();
+        int number = Integer.parseInt(SCANNER.nextLine());
 
-        printNxNMatrix(Integer.parseInt(number), number);
+        printNxNMatrix(number);
     }
 
-    private static void printNxNMatrix(int rows, String content) {
-        for (int i = 0; i < rows; i++) {
-            System.out.println(String.join(" ", content.repeat(rows).split("")));
+    private static void printNxNMatrix(int number) {
+        for (int i = 0; i < number; i++) {
+            for (int j = 0; j < number; j++) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
         }
     }
 
