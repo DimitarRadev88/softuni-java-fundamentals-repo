@@ -1,4 +1,4 @@
-package com.objectsAndClasses.songs;
+package com.objectsAndClasses.lab.songs;
 
 import java.util.ArrayList;
 import java.util.List;

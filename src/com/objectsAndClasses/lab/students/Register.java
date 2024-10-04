@@ -1,4 +1,4 @@
-package com.objectsAndClasses.students;
+package com.objectsAndClasses.lab.students;
 
 import java.util.List;
 

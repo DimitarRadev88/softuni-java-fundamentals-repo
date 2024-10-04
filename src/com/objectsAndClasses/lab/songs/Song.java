@@ -1,4 +1,4 @@
-package com.objectsAndClasses.songs;
+package com.objectsAndClasses.lab.songs;
 
 public class Song {
     private String typeList;

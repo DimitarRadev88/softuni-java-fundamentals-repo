@@ -1,4 +1,4 @@
-package com.objectsAndClasses;
+package com.objectsAndClasses.lab;
 
 import java.math.BigInteger;
 import java.util.Scanner;
